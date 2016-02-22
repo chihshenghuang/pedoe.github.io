@@ -4,7 +4,7 @@
   <title><![CDATA[Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-02-22T09:30:32+08:00</updated>
+  <updated>2016-02-22T13:43:56+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Article]]></title>
+    <link href="http://pedoe.github.io/blog/2016/02/22/first-article/"/>
+    <updated>2016-02-22T13:42:25+08:00</updated>
+    <id>http://pedoe.github.io/blog/2016/02/22/first-article</id>
+    <content type="html"><![CDATA[<p>This is the first post of my blog!!</p>
+]]></content>
+  </entry>
   
 </feed>
