@@ -4,7 +4,7 @@
   <title><![CDATA[Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-03T16:15:51+08:00</updated>
+  <updated>2016-03-03T16:49:45+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -18,7 +18,11 @@
     <link href="http://pedoe.github.io/blog/2016/03/02/octopress-plus-github-tutorial/"/>
     <updated>2016-03-02T23:38:45+08:00</updated>
     <id>http://pedoe.github.io/blog/2016/03/02/octopress-plus-github-tutorial</id>
-    <content type="html"><![CDATA[<h3>基本設定</h3>
+    <content type="html"><![CDATA[<h3>前言</h3>
+
+<p>  當初查找資料時, 看到許多人的blog都是簡潔乾淨的風格, 查詢之後才知道這是Octopress開源框架加上GitHub Pages服務來建立的blog. 在安裝搭載blog時也遇到了不少問題, 所以將整個流程記錄下來, 希望能幫助跟我一樣遇到困難的人.</p>
+
+<h3>基本設定</h3>
 
 <ol>
 <li><p>安裝Xcode Command Line Tool:</p>
@@ -36,15 +40,12 @@
 
 <h3>建立Github Repository</h3>
 
-<ol>
-<li><p>在GitHub內create new repository, Repository name請打"yourname.github.io",
-ex:我的github帳號為pedoe, repository name:pedoe.github.io(帳號與repository name須一致, 一開始我隨便打下場很慘)</p>
+<p>在GitHub內create new repository, Repository name請打"yourname.github.io",
+   ex:我的github帳號為pedoe, repository name:pedoe.github.io(帳號與repository name須一致, 一開始我隨便打下場很慘)</p>
 
-<p><img src="http://pedoe.github.io/images/github_repository.png" alt="Alt Text" /></p>
+<p>   <img src="http://pedoe.github.io/images/github_repository.png" alt="Alt Text" /></p>
 
-<p>Create成功後請記下SSH位置, ex:git@github.com:pedoe/pedoe.github.com.git</p></li>
-</ol>
-
+<p>   Create成功後請記下SSH位置, ex:git@github.com:pedoe/pedoe.github.com.git</p>
 
 <h3>安裝Octopress</h3>
 
@@ -57,12 +58,17 @@ ex:我的github帳號為pedoe, repository name:pedoe.github.io(帳號與reposito
 <p><code>$cd octopress</code></p></li>
 <li><p>安裝octopress所需的dependencies</p>
 
-<p><code>$gem install bundler</code>
-<code>$bundle install</code></p></li>
+<p><code>$gem install bundler</code></p>
+
+<p><code>$bundle install</code></p></li>
 <li><p>安裝octopress默認的主題</p>
 
 <p><code>$rake install</code></p></li>
-<li><p>Local端安裝完畢, 可以在octopress file內執行命令<code>$rake preview</code>,   接著開啟web browser輸入網址<a href="http://localhost:4000/,">http://localhost:4000/,</a> 就可以看到初步的樣子囉!</p></li>
+<li><p>Local端安裝完畢, 可以在octopress file內執行命令</p>
+
+<p><code>$rake preview</code>,</p>
+
+<p>接著開啟web browser輸入網址<a href="http://localhost:4000/,">http://localhost:4000/,</a> 就可以看到初步的樣子囉!</p></li>
 </ol>
 
 
@@ -78,69 +84,45 @@ ex:我的github帳號為pedoe, repository name:pedoe.github.io(帳號與reposito
 <h3>Generate and Depoly Web</h3>
 
 <ol>
-<li>在Octopress file內設定got pages</li>
+<li><p>在Octopress file內設定got pages</p>
+
+<p><code>$rake setup_github_pages</code></p>
+
+<p>輸入完command後會要求你輸入ssh位址, 將github上創建完成的repository位址輸入(步驟3中所得到的)</p></li>
+<li><p>生成頁面</p>
+
+<p><code>$rake generate</code></p></li>
+<li><p>部署頁面</p>
+
+<p><code>$rake deploy</code></p>
+
+<p>但是輸入此命令後我遇到push的問題, 出現error如下</p>
+
+<p><code>![rejected]master -&gt; master (non-fast-forward)</code></p>
+
+<p>這個問題google過後得到<a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress,">http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress,</a> 我照著他的做法解決了, 步驟列在下方</p></li>
+<li><p>處理git的問題:</p>
+
+<p><code>$git config branch.master.remote origin</code></p>
+
+<p><code>$git config branch.master.merge refs/heads/master</code></p>
+
+<p><code>$git pull</code></p></li>
+<li><p>再一次部署頁面</p>
+
+<p><code>$rake deploy</code></p>
+
+<p>等個幾分鐘後在browser輸入"<a href="http://urname.github.io">http://urname.github.io</a>", 像我的就是<a href="http://pedoe.github.io">http://pedoe.github.io</a> , 輸入完成後應該就能看到你的blog囉!</p></li>
+<li><p>將生成的code上傳至github中:</p>
+
+<p><code>$git add .</code></p>
+
+<p><code>$git commit -m 'create blog'</code></p>
+
+<p><code>$git push oriin source</code></p></li>
+<li><p>準備開始寫文章吧!</p></li>
 </ol>
 
-
-<p>   <code>$rake setup_github_pages</code></p>
-
-<p>   輸入完command後會要求你輸入ssh位址, 將github上創建完成的repository位址輸入(步驟3中所得到的)</p>
-
-<ol>
-<li>生成頁面</li>
-</ol>
-
-
-<p>   <code>$rake generate</code></p>
-
-<ol>
-<li>部署頁面</li>
-</ol>
-
-
-<p>   <code>$rake deploy</code></p>
-
-<p>   但是輸入此命令後我遇到push的問題, 出現error如下</p>
-
-<p>   <code>![rejected]master -&gt; master (non-fast-forward)</code></p>
-
-<p>   這個問題google過後得到<a href="http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress,">http://stackoverflow.com/questions/21356212/failed-to-deploy-to-github-pages-using-octopress,</a> 我照著他的做法解決了, 步驟列在下方</p>
-
-<ol>
-<li>處理git的問題:</li>
-</ol>
-
-
-<p>   <code>$git config branch.master.remote origin</code>
-   <code>$git config branch.master.merge refs/heads/master</code>
-   <code>$git pull</code></p>
-
-<ol>
-<li>再一次部署頁面</li>
-</ol>
-
-
-<p>   <code>$rake deploy</code></p>
-
-<p>   等個幾分鐘後在browser輸入:<a href="http://urname.github.io,">http://urname.github.io,</a> 應該就能看到你的blog囉!</p>
-
-<ol>
-<li>將生成的code上傳至github中:</li>
-</ol>
-
-
-<p>   <code>$git add .</code>
-   <code>$git commit -m 'create blog'</code>
-   <code>$git push oriin source</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First article]]></title>
-    <link href="http://pedoe.github.io/blog/2016/02/22/first-article/"/>
-    <updated>2016-02-22T13:42:25+08:00</updated>
-    <id>http://pedoe.github.io/blog/2016/02/22/first-article</id>
-    <content type="html"><![CDATA[<p>This is the first post of my blog!!</p>
 ]]></content>
   </entry>
   
