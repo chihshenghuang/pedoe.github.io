@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sass | Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-03T16:58:17+08:00</updated>
+  <updated>2016-03-03T21:24:43+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -68,7 +68,7 @@
 
 <p><code>$rake preview</code>,</p>
 
-<p>接著開啟web browser輸入網址<a href="http://localhost:4000/,">http://localhost:4000/,</a> 就可以看到初步的樣子囉!</p></li>
+<p>接著開啟web browser輸入網址<a href="http://localhost:4000/">http://localhost:4000/</a> , 就可以看到初步的樣子囉!</p></li>
 </ol>
 
 
