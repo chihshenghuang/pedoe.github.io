@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css3 | Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/blog/categories/css3/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-07T10:31:28+08:00</updated>
+  <updated>2016-03-07T10:33:36+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -119,7 +119,7 @@
 
 <p><code>$git commit -m 'create blog'</code></p>
 
-<p><code>$git push oriin source</code></p></li>
+<p><code>$git push origin source</code></p></li>
 <li><p>準備開始寫文章吧!</p></li>
 </ol>
 
