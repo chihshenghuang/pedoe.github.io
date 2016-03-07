@@ -115,7 +115,7 @@ categories:
    
    `$git commit -m 'create blog'`
    
-   `$git push oriin source`
+   `$git push origin source`
 
 7. 準備開始寫文章吧!
 
