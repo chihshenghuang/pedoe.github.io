@@ -10,8 +10,7 @@ categories:
 ---
 
 ##前言
-  當初查找資料時, 看到許多人的blog都是簡潔乾淨的風格, 查詢之後才知道這是Octopress開源框架加上GitHub Pages服務來建立的blog\. 在安裝搭載blog時也遇到了不少問題, 所以將整個流程記錄下來, 希望能幫助跟我一樣遇到困難的人\.
-
+  當初查找資料時。 看到許多人的blog都是簡潔乾淨的風格, 查詢之後才知道這是Octopress開源框架加上GitHub Pages服務來建立的blog。 在安裝搭載blog時也遇到了不少問題, 所以將整個流程記錄下來, 希望能幫助跟我一樣遇到困難的人。
 
 
 ##基本設定
@@ -62,7 +61,7 @@ categories:
    
    `$rake preview`,
    
-   接著開啟web browser輸入網址http://localhost:4000/, 就可以看到初步的樣子囉!
+   接著開啟web browser輸入網址http://localhost:4000/ , 就可以看到初步的樣子囉!
 
 
 
