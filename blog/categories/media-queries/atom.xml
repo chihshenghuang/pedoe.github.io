@@ -4,7 +4,7 @@
   <title><![CDATA[Category: media queries | Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/blog/categories/media-queries/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-03T21:24:43+08:00</updated>
+  <updated>2016-03-07T10:31:28+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -20,7 +20,7 @@
     <id>http://pedoe.github.io/blog/2016/03/02/octopress-plus-github-tutorial</id>
     <content type="html"><![CDATA[<h2>前言</h2>
 
-<p>  當初查找資料時, 看到許多人的blog都是簡潔乾淨的風格, 查詢之後才知道這是Octopress開源框架加上GitHub Pages服務來建立的blog. 在安裝搭載blog時也遇到了不少問題, 所以將整個流程記錄下來, 希望能幫助跟我一樣遇到困難的人.</p>
+<p>  當初查找資料時。 看到許多人的blog都是簡潔乾淨的風格, 查詢之後才知道這是Octopress開源框架加上GitHub Pages服務來建立的blog。 在安裝搭載blog時也遇到了不少問題, 所以將整個流程記錄下來, 希望能幫助跟我一樣遇到困難的人。</p>
 
 <h2>基本設定</h2>
 
