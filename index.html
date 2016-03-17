@@ -9,7 +9,7 @@
 	<meta name="author" content="Chih Sheng Huang">
 
 	
-	<meta name="description" content="Comments Post Article 前言 成功架好blog後要做的第一件事, 就是來發表一篇文章充充版面。這篇文章中會教大家如何發表文章以及基礎的排版編輯。首先要來談談使用Octopress+Github Pages架設網頁的主要優點。 &hellip;">
+	<meta name="description" content="Comments How to Update Locate Database on OS X 在Mac上使用locate指令尋找檔案 最近開始學在Mac上用Terminal做事情, ㄧ直不知道怎樣找檔案最快, 直到讀到了locate這個指令。 但是第一次使用locate前需要update &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -61,6 +61,8 @@
 		
 		
 		
+			<a class="github" href="https://github.com/pedoe" title="GitHub">GitHub</a>
+		
 		
 		
 		
@@ -86,6 +88,81 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-17T09:51:29+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2016/03/17/update-locate-database/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2016/03/17/update-locate-database/" itemprop="url">How to Update Locate Database on OS X</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>在Mac上使用locate指令尋找檔案</h2>
+
+<p>最近開始學在Mac上用Terminal做事情, ㄧ直不知道怎樣找檔案最快, 直到讀到了locate這個指令。</p>
+
+<p>但是第一次使用locate前需要update database, 若是沒有更新會遇到以下問題:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>WARNING: The locate database (/var/db/locate.database) does not exist.
+</span><span class='line'>To create the database, run the following command:
+</span><span class='line'>
+</span><span class='line'>  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+</span><span class='line'>
+</span><span class='line'>  Please be aware that the database can take some time to generate; once
+</span><span class='line'>  the database has been created, this message will no longer appear.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>而怎麼更新database在"Learning Unix for OS X" 這本書上並沒有講得很清楚, 因此上網google了一下。</p>
+
+<p>需要執行<code>$sudo /usr/libexec/locate.updatedb</code></p>
+
+<p>讓你的Mac做第一次更新, 第一次會花些時間來建立你的database。</p>
+
+<p>成功後就可以使用locate查詢, ex: <code>$locate test</code></p>
+
+<p>但是接下來每次更新都需要下相同指令<code>$sudo /usr/libexec/locate.updatedb</code>,</p>
+
+<p>變得稍嫌麻煩, 可以做一些更改將指令簡化成updatedb(跟linux上相同的指令)。</p>
+
+<p><code>cd /usr/local/bin</code></p>
+
+<p><code>ln -s /usr/libexec/locate.updatedb updatedb</code></p>
+
+<p>接下來每次更新database只需要下<code>updatedb</code>就可以了。</p>
+
+<h2>Referrence</h2>
+
+<p>1.<a href="http://aross.se/2015/07/19/how-to-update-locate-database-on-osx.html">http://aross.se/2015/07/19/how-to-update-locate-database-on-osx.html</a></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

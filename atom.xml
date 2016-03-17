@@ -4,7 +4,7 @@
   <title><![CDATA[Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-07T10:33:36+08:00</updated>
+  <updated>2016-03-17T10:23:40+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Update Locate Database on OS X]]></title>
+    <link href="http://pedoe.github.io/blog/2016/03/17/update-locate-database/"/>
+    <updated>2016-03-17T09:51:29+08:00</updated>
+    <id>http://pedoe.github.io/blog/2016/03/17/update-locate-database</id>
+    <content type="html"><![CDATA[<h2>在Mac上使用locate指令尋找檔案</h2>
+
+<p>最近開始學在Mac上用Terminal做事情, ㄧ直不知道怎樣找檔案最快, 直到讀到了locate這個指令。</p>
+
+<p>但是第一次使用locate前需要update database, 若是沒有更新會遇到以下問題:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>WARNING: The locate database (/var/db/locate.database) does not exist.
+</span><span class='line'>To create the database, run the following command:
+</span><span class='line'>
+</span><span class='line'>  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+</span><span class='line'>
+</span><span class='line'>  Please be aware that the database can take some time to generate; once
+</span><span class='line'>  the database has been created, this message will no longer appear.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>而怎麼更新database在"Learning Unix for OS X" 這本書上並沒有講得很清楚, 因此上網google了一下。</p>
+
+<p>需要執行<code>$sudo /usr/libexec/locate.updatedb</code></p>
+
+<p>讓你的Mac做第一次更新, 第一次會花些時間來建立你的database。</p>
+
+<p>成功後就可以使用locate查詢, ex: <code>$locate test</code></p>
+
+<p>但是接下來每次更新都需要下相同指令<code>$sudo /usr/libexec/locate.updatedb</code>,</p>
+
+<p>變得稍嫌麻煩, 可以做一些更改將指令簡化成updatedb(跟linux上相同的指令)。</p>
+
+<p><code>cd /usr/local/bin</code></p>
+
+<p><code>ln -s /usr/libexec/locate.updatedb updatedb</code></p>
+
+<p>接下來每次更新database只需要下<code>updatedb</code>就可以了。</p>
+
+<h2>Referrence</h2>
+
+<p>1.<a href="http://aross.se/2015/07/19/how-to-update-locate-database-on-osx.html">http://aross.se/2015/07/19/how-to-update-locate-database-on-osx.html</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Post Article]]></title>
