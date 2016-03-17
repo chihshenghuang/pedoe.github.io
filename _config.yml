@@ -46,7 +46,6 @@ paginate_path: "post/:num"  # Directory base for pagination URLs eg. /posts/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_separator: "<!--more-->"
-
 titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
@@ -63,7 +62,7 @@ blog_index_asides: [custom/asides/aboutme.html, asides/recent_posts.html, asides
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: pedoe
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
