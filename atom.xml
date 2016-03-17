@@ -4,7 +4,7 @@
   <title><![CDATA[Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-03-17T10:23:40+08:00</updated>
+  <updated>2016-03-17T20:06:16+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to separate storyboard for iPhone and iPad]]></title>
+    <link href="http://pedoe.github.io/blog/2016/03/17/how-to-separate-storyboard-for-iphone-and-ipad/"/>
+    <updated>2016-03-17T19:29:51+08:00</updated>
+    <id>http://pedoe.github.io/blog/2016/03/17/how-to-separate-storyboard-for-iphone-and-ipad</id>
+    <content type="html"><![CDATA[<h2>Storyboard for iPhone and iPad</h2>
+
+<p>在Xocde6時Apple提供了Universal Storyboard的選項讓一個storyboard可以適應任何size的裝置。但有時候還是會因為iPhone與iPad的大小不同來呈現不同的效果, 在Standford CS193 Class11中的例子就使用iPad額外添加splitView的效果。</p>
+
+<p>1.增加iPad的Storyboard</p>
+
+<p>  <img src="http://pedoe.github.io/images/CreateStoryboard.png" alt="Create Storyboard" /></p>
+
+<p>2.取名(這裏我用<code>Main_iPad</code>)</p>
+
+<p>  <img src="http://pedoe.github.io/images/GiveName.png" alt="Give Name" /></p>
+
+<p>3.在Project setting中選擇Info</p>
+
+<p>  <img src="http://pedoe.github.io/images/Info.png" alt="Info" /></p>
+
+<p>4.右鍵新增並取名為的Main storyboard file base name (iPad)</p>
+
+<p>  <img src="http://pedoe.github.io/images/AddNewStoryboardfile.png" alt="Add New Storyboard File" /></p>
+
+<p>5.Value中給定你在步驟3中設定iPad storyboard的名字(這裏我的是<code>Main_iPad</code>)</p>
+
+<p>6.別忘了開啟iPad Storyboard設定Initial view, 才找得到你的Viewcontroller</p>
+
+<p>  <img src="http://pedoe.github.io/images/AddInitialView.png" alt="AddInitialView" /></p>
+
+<h2>Reference</h2>
+
+<p>1.<a href="https://irawd.wordpress.com/2014/10/21/xcode-6-separate-storyboard-for-ipad-and-iphone/">https://irawd.wordpress.com/2014/10/21/xcode-6-separate-storyboard-for-ipad-and-iphone/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Update Locate Database on OS X]]></title>
