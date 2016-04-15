@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://pedoe.github.io/blog/2016/04/13/ios-h264-hardware-encode/</loc>
+<lastmod>2016-04-13T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://pedoe.github.io/blog/2016/03/17/how-to-separate-storyboard-for-iphone-and-ipad/</loc>
 <lastmod>2016-03-17T19:29:51+08:00</lastmod>
 </url>
