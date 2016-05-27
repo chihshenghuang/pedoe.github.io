@@ -4,7 +4,7 @@
   <title><![CDATA[Chih Sheng Huang's Blog]]></title>
   <link href="http://pedoe.github.io/atom.xml" rel="self"/>
   <link href="http://pedoe.github.io/"/>
-  <updated>2016-04-15T11:42:31+08:00</updated>
+  <updated>2016-05-27T15:02:54+08:00</updated>
   <id>http://pedoe.github.io/</id>
   <author>
     <name><![CDATA[Chih Sheng Huang]]></name>
@@ -14,9 +14,52 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Ios H264 Hardware Encode]]></title>
+    <title type="html"><![CDATA[How to run java on Mac]]></title>
+    <link href="http://pedoe.github.io/blog/2016/05/27/how-to-run-java-on-mac/"/>
+    <updated>2016-05-27T14:07:18+08:00</updated>
+    <id>http://pedoe.github.io/blog/2016/05/27/how-to-run-java-on-mac</id>
+    <content type="html"><![CDATA[<h2>How to run the java code on the Mac</h2>
+
+<h2>前言</h2>
+
+<p>最近要開始學java, 本來想說要找個IDE來做開發練習, 但是又有點懶, 也想繼續多多練習使用vim。 就google了一下怎麼在mac上build java code, 畢竟跟C或C++不太一樣不能用gcc。接著以最常見的hello world當作範例。</p>
+
+<h2>Step1</h2>
+
+<p>寫一個印出hello world的程式</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class HelloWorld{
+</span><span class='line'>  public static void main(String[] args)
+</span><span class='line'>  {
+</span><span class='line'>      System.out.println("hello world");
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step2</h2>
+
+<p>使用javac指令做編譯</p>
+
+<p>  <img src="http://pedoe.github.io/images/HowToBuildJavaOnMac/compile.png" alt="compile" /></p>
+
+<h2>Step3</h2>
+
+<p>輸入java HelloWorld, 就可以看到結果了!</p>
+
+<p>  <img src="http://pedoe.github.io/images/HowToBuildJavaOnMac/execute.png" alt="execute" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS H264 Hardware Encode]]></title>
     <link href="http://pedoe.github.io/blog/2016/04/13/ios-h264-hardware-encode/"/>
-    <updated>2016-04-13T00:00:00+08:00</updated>
+    <updated>2016-04-13T16:33:42+08:00</updated>
     <id>http://pedoe.github.io/blog/2016/04/13/ios-h264-hardware-encode</id>
     <content type="html"><![CDATA[<h2>How to encode h264 file on iPhone by hardware encoding</h2>
 
